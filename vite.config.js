@@ -6,7 +6,7 @@ export default defineConfig({
   server:{
     port: 5500,
     proxy: {
-      '/api/v1': 'https://sample-seven-nu.vercel.app'
+      '/api/v1': 'https://sample-blogs.vercel.app'
     }
   },
   plugins: [react()],
