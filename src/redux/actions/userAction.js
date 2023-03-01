@@ -48,7 +48,9 @@ export const logout = () => async(dispatch) => {
 export const loadUser = () => async(dispatch) => {
     dispatch({type:'loadUserRequest'});
     try {
-        const {data} = await axios.get(`/api/v1/me`);
+        const {data} = await axios.get(`/api/v1/me`,{
+            withCredentials: true
+        });
         if(data.success) {
             dispatch({type:'loadUserSuccess', payload:data.user})
         }else{
